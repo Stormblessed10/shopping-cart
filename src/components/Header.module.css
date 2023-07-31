@@ -27,6 +27,7 @@
     border: none;
     padding: 0.8rem 1.5rem;
     width: 100%;
+    font-weight: 700;
 }
 
 .search input::placeholder {
