@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
     height: calc(100vh - 8rem);
     width: 100%;
     color: var(--color-primary);
@@ -10,13 +10,22 @@
 }
 
 .home a:link, .home a:visited {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+
     text-decoration: none;
     color: var(--color-tertiary);
     padding: 1rem 2rem;
     background-color: var(--color-primary);
     border-radius: 20px;
     transition: all 0.5s;
+
+    & img {
+        height: 2rem;
+        width: 2rem;
+    }
 }
 
 .home a:hover, .home a:active {
