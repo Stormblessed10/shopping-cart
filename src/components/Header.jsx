@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 export default function Header() {
     
     return <header className={styles.header}>
-        <Link className={styles.logo} to="">Shopping cart</Link>
+        <Link className={styles.logo} to="">Game Store</Link>
         <div className={styles.search}>
-            <input type="text" placeholder="Search games"/>
+            <input type="text" placeholder="Search..."/>
             <button><img src="/icons/search.svg" alt="search" /></button>
         </div>
         <button className={styles.cart}><img src="/icons/cart.svg" alt="cart" /><span></span></button>
