@@ -1,7 +1,8 @@
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+
     font-family: "Diablo";
     padding: 2rem 1rem;
 }
@@ -16,7 +17,9 @@
     display: flex;
     border-radius: 10px;
     overflow: hidden;
-    width: 30rem
+    width: 30rem;
+    transition: all 0.2s;
+    margin: 0 auto;
 }
 
 .search input {
@@ -24,6 +27,23 @@
     border: none;
     padding: 0.8rem 1.5rem;
     width: 100%;
+}
+
+.search input::placeholder {
+    opacity: 50%;
+}
+
+.search:focus-within {
+    width: 45rem;
+    animation: focus 0.2s;
+}
+
+@keyframes focus {
+    from {
+        width: 30rem;
+    } to {
+        width: 45.5rem;
+    }
 }
 
 .search button {
@@ -40,11 +60,11 @@
 }
 
 .cart {
+    margin-left: auto;
     background: transparent;
     border: none;
     outline: none;
     position: relative;
-    /* transition: all 0.1s; */
 }
 
 .cart:hover {
