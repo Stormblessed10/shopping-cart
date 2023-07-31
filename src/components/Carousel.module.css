@@ -1,0 +1,82 @@
+.carousel-wrapper {
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    flex-wrap: nowrap;
+
+    width: 80rem;
+    overflow: hidden;
+    cursor: grab;
+    border-radius: 20px;
+}
+
+.carousel:active {
+    cursor: grabbing;
+}
+
+.carousel img {
+    flex-shrink: 0;
+    height: 50rem;
+    width: 80rem;
+    background-color: var(--color-primary);
+    -webkit-user-drag: none;
+    -ms-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+.dots {
+    display: flex;
+    gap: 1rem;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+
+    border-radius: 20px;
+    background-color: var(--color-tertiary);
+    padding: 1.6rem;
+}
+
+.dots div {
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+}
+
+.dot {
+    background-color: var(--color-primary);
+}
+
+.dots .current {
+    background-color: var(--color-secondary);
+}
+
+.carousel-wrapper button {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+
+    background: transparent;
+    font-size: 20rem;
+    height: 100%;
+    width: 5rem;
+    outline: none;
+    border: none;
+}
+
+.carousel-wrapper svg {
+    fill: var(--color-primary);
+}
+
+.button-left {
+    left: 0;
+}
+
+.button-right {
+    right: 0;
+}
