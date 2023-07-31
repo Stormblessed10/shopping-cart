@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Diablo";
+    src: url("/font/Diablo.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+  --color-primary: #fff;
+  --color-secondary: #f36f1f;
+  --color-tertiary: #202020; 
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+#root {
+    max-width: 128rem;
+    margin: 0 auto;
+}
+
+button {
+    cursor: pointer;
+}
