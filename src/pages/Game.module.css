@@ -44,14 +44,15 @@
     border: none;
     color: var(--color-primary);
     transition: all 0.4s;
+}
 
-    &:hover {
-        color: var(--color-secondary);
-    }
+.buy:active {
+    transform: scale(90%);
 }
 
 .details {
-    padding-left: 3rem; 
+    padding-left: 3rem;
+    list-style-type: none;
 }
 
 .details li {
