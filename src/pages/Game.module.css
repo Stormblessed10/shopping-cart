@@ -33,23 +33,6 @@
     fill: var(--color-secondary);
 }
 
-.buy {
-    display: block;
-    font-weight: 700;
-    font-size: 2.5rem;
-    text-align: end;
-
-    padding-left: 3rem; 
-    background: none;
-    border: none;
-    color: var(--color-primary);
-    transition: all 0.4s;
-}
-
-.buy:active {
-    transform: scale(90%);
-}
-
 .details {
     padding-left: 3rem;
     list-style-type: none;

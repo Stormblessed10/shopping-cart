@@ -1,32 +1,21 @@
 import styles from "./Game.module.css";
 import Carousel from "../components/Carousel";
+import Cart from "../components/Cart";
+import AddButton from "../components/AddButton";
 import { Link, useLoaderData, useLocation } from "react-router-dom";
-import { useGames } from "../context/GamesContext";
-import { useState } from "react";
 
 export default function Game() {
-    const [alreadyAdd, setAlreadyAdd] = useState(false);
-    const {game, screenshots} = useLoaderData();
-    const {state} = useLocation();
-    const { setCart } =  useGames();
+    const { game, screenshots } = useLoaderData();
+    const { state } = useLocation();
 
     const price = +game.rating ? Math.round(game.rating) * 5 - 0.01 : 4.99;
     const backgroundImage = {
         id: "background",
         image: game.background_image,
     }
-    
-    function handleAddToCart() {
-        setCart(cart => [...cart, {name: game.name, img: game.background_image, price, id: game.id}]);
-        setAlreadyAdd(true);
-    }
-
-    function handleRemoveFromCart() {
-        setCart(cart => cart.filter(({ id }) => id !== game.id));
-        setAlreadyAdd(false);
-    }
 
     return <section className={styles.game}>
+        <Cart></Cart>
         <header className={styles.wrapper}>
             <Link to={state?.previousPath || "/"} className={styles.back}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -37,8 +26,7 @@ export default function Game() {
         </header>
         <div className={styles.wrapper}>
             <div>
-                {!alreadyAdd && <button onClick={handleAddToCart} className={styles.buy}>+ Add to cart</button>}
-                {alreadyAdd && <button onClick={handleRemoveFromCart} className={styles.buy}>- Remove from cart</button>}
+               <AddButton game={game} fz={"2.5rem"} price={price}/>
                 <ul className={styles.details}>
                     <li>
                         <h2>Price</h2>
