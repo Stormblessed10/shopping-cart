@@ -1,10 +1,10 @@
 import styles from "./Game.module.css";
 import Carousel from "../components/Carousel";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { Link, useLoaderData, useLocation } from "react-router-dom";
 
 export default function Game() {
     const {game, screenshots} = useLoaderData();
-    const navigate = useNavigate();
+    const {state} = useLocation();
 
     const price = +game.rating ? Math.round(game.rating) * 5 - 0.01 : 4.99;
     const backgroundImage = {
@@ -14,11 +14,11 @@ export default function Game() {
 
     return <section className={styles.game}>
         <div className={styles.wrapper}>
-            <button onClick={() => navigate(-1)} className={styles.back}>
+            <Link to={state?.previousPath || "/"} className={styles.back}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path d="M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414z"></path>
                 </svg>
-            </button>
+            </Link>
             <h1>{game.name}</h1>
         </div>
         <div className={styles.wrapper}>
