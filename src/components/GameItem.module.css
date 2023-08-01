@@ -1,0 +1,42 @@
+.game {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--color-tertiary);
+}
+
+.game img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.wrapper {
+    font-size: 1.6rem;
+    padding: 1.5rem 2rem;
+}
+
+.wrapper-cart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper-cart button {
+    color: var(--color-primary);
+    font-size: 1.6rem;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.wrapper-cart span {
+    display: inline-block;
+}
+
+.wrapper a:link, a:visited {
+    color: var(--color-primary);
+    font-size: 2.4rem;
+    background-color: transparent;
+    text-decoration: none;
+}
