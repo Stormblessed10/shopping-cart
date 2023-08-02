@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
 
-    height: calc(100vh - 8rem);
+    height: calc(100vh - 10rem);
     width: 100%;
     color: var(--color-primary);
     text-align: center;
@@ -71,4 +71,25 @@
 
 .nav h2 {
     color: var(--color-primary);
+}
+
+.nav svg {
+    height: 1.8rem;
+    width: 1.8rem;
+}
+
+.nav svg, .nav path {
+    fill: var(--color-tertiary);
+}
+
+.video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -100;
 }
