@@ -4,7 +4,7 @@
     align-items: center;
 
     font-family: "Diablo";
-    padding: 2rem 1rem;
+    padding: 2rem 0;
 }
 
 .logo:link, .logo:visited {
@@ -36,14 +36,18 @@
 
 .search:focus-within {
     width: 45rem;
-    animation: focus 0.2s;
+    animation: focus 0.5s;
 }
 
 @keyframes focus {
-    from {
+    0% {
         width: 30rem;
-    } to {
-        width: 45.5rem;
+    }
+    50% {
+        width: 48rem;
+    }
+    100% {
+        width: 45rem;
     }
 }
 
