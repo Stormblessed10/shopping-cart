@@ -51,7 +51,7 @@
     }
 }
 
-.search button {
+.search span {
     background-color: var(--color-primary);
     border: none;
     padding: 0.4rem 0.8rem;
