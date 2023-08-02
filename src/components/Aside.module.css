@@ -1,0 +1,83 @@
+.aside {
+    padding: 3rem 0 0 0;
+    position: sticky;
+    top: 0;
+    height: 100%;
+    width: 20rem;
+    flex-shrink: 0;
+    margin-right: 1rem;
+}
+
+.aside nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.list {
+    list-style-type: none;
+    color: var(--color-primary);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.list h2 {
+    font-size: 2.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.list li a:link, .list li a:visited {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.list li img {
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 6px;
+}
+
+.list li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ffffff1a;
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 6px;
+    transition: all 1s;
+}
+
+.list li:hover {
+
+    & span {
+        background-color: var(--color-primary);
+    }
+    
+    & svg {
+        fill: var(--color-tertiary);
+    }
+
+    & path {
+        fill: var(--color-tertiary);
+
+    }
+}
+
+.list li svg {
+    fill: var(--color-primary);
+    height: 1.8rem;
+    width: 1.8rem;
+
+    & path {
+        fill: var(--color-primary);
+    }
+}
