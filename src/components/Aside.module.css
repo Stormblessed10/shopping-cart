@@ -56,7 +56,7 @@
     transition: all 1s;
 }
 
-.list li:hover {
+.list a:hover, .list a.active {
 
     & span {
         background-color: var(--color-primary);
