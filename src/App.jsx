@@ -4,6 +4,7 @@ import AppLayout from './pages/AppLayout';
 import Home from './pages/Home';
 import { GamesProvider } from "./context/GamesContext";
 import Game, { loader as gameLoader } from "./pages/Game";
+import PageNotFound from "./pages/PageNotFound";
 
 const router = createBrowserRouter([
   {
@@ -11,22 +12,20 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home/>
       },
       {
         path: "/shop",
-        element: <Navigate replace to="genres/role-playing-games-rpg"/>,
+        element: <Navigate replace to="top/all-time-top/1"/>,
+      },
+      {
+        path: "/shop/:category/:id/:page",
+        element: <Shop/>,
         loader: shopLoader
       },
       {
         path: "/shop/:category/:id",
-        element: <Shop></Shop>,
-        loader: shopLoader
-      },
-      {
-        path: "/game",
-        element: <Navigate to="1"/>,
-        loader: gameLoader
+        element: <Navigate replace to="1"/>,
       },
       {
         path: "/game/:id",
@@ -34,14 +33,13 @@ const router = createBrowserRouter([
         loader: gameLoader,
       },
       {
-        path: "/shop/:category/:id/game",
-        element: <Navigate to="1"/>,
-        loader: gameLoader
-      },
-      {
-        path: "/shop/:category/:id/game/:id",
+        path: "/shop/:category/:id/:page/game/:id",
         element: <Game/>,
         loader: gameLoader,
+      },
+      {
+        path: "*",
+        element: <PageNotFound/>,
       },
     ]
   },
