@@ -25,6 +25,10 @@ body {
     background-color: var(--color-background);
 }
 
+.hide-scroll {
+    overflow-y: hidden;
+}
+
 #root {
     max-width: 128rem;
     margin: 0 auto;
