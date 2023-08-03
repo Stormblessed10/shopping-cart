@@ -1,4 +1,5 @@
 import styles from "./GameItem.module.css";
+import AddToCart from './AddToCart';
 import {Link, useLocation} from "react-router-dom";
 
 export default function GameItem({ game }) {
@@ -11,7 +12,7 @@ export default function GameItem({ game }) {
         </Link>
         <div className={styles.wrapper}>
             <div className={styles["wrapper-cart"]}>
-                <button>Add to cart</button>
+                <AddToCart game={{...game, price, img: game.background_image}} style={{fontSize: "1.6rem"}}/>
                 <span>${price}</span>
             </div>
             <div>Icons</div>

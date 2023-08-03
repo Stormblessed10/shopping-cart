@@ -8,6 +8,7 @@
 
 .game img {
     width: 100%;
+    min-height: 20rem;
     height: 20rem;
     object-fit: cover;
 }
@@ -20,14 +21,6 @@
 .wrapper-cart {
     display: flex;
     justify-content: space-between;
-}
-
-.wrapper-cart button {
-    color: var(--color-primary);
-    font-size: 1.6rem;
-    background: transparent;
-    border: none;
-    outline: none;
 }
 
 .wrapper-cart span {
