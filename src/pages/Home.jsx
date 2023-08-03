@@ -27,7 +27,7 @@ export default function Home() {
         <nav className={`${styles.nav} ${styles.wrap}`}>
             <ul>
                 <li><h2>Quick Navigation</h2></li>
-                <li><Link to="/shop/releases/all-time-top/1"><span><SvgTop/></span>All time top</Link></li>
+                <li><Link to="/shop/top/all-time-top/1"><span><SvgTop/></span>All time top</Link></li>
                 <li><Link to="/shop/top/best-of-the-year/1"><span><SvgBest/></span>Best of the year</Link></li>
                 <li><Link to="/shop/releases/last-30-days/1"><span><SvgStar/></span>Last 30 days</Link></li>
                 <li><Link to="/shop/releases/next-week/1"><span><SvgNextWeek/></span>Next week</Link></li>
