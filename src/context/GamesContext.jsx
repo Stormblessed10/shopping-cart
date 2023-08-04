@@ -5,8 +5,9 @@ const GamesContext = createContext();
 export function GamesProvider({ children }) {
     const [cart, setCart] = useState([]);
     const [isCartOpen, setIsCartOpen] = useState(false);
+    const [pageError, setPageError] = useState(false);
 
-    return <GamesContext.Provider value={{ cart, setCart, isCartOpen, setIsCartOpen }}>{children}</GamesContext.Provider>
+    return <GamesContext.Provider value={{ pageError, setPageError, cart, setCart, isCartOpen, setIsCartOpen }}>{children}</GamesContext.Provider>
 }
 
 export function useGames() {
