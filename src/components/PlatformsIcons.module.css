@@ -1,0 +1,9 @@
+.icons {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.icons svg {
+    height: 2rem;
+    width: 2rem;
+}
