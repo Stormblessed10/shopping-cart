@@ -12,6 +12,7 @@
 .wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 3rem;
 }
 
@@ -93,7 +94,7 @@
 
 .descr {
     letter-spacing: 1.6px;
-    padding: 3rem;
+    padding: 3rem 3rem 0 3rem;
 }
 
 .descr h2 {
