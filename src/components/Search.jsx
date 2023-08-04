@@ -31,6 +31,7 @@ export default function Search() {
 
         return function() {
             controller.abort();
+            if (input.length) setGames([]);  
         }
     }, [input])
 
