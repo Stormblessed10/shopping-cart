@@ -5,7 +5,8 @@ import {
     SvgStar,
     SvgBest,
     SvgNextWeek,
-    SvgThisWeek 
+    SvgThisWeek,
+    SvgGithub
 } from "../components/Svgs.jsx";
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
             <div className={`${styles.wrap}`}>
                 <p>App is built using React and React Router, and integrated the Rawg API to ensure that you have access to the latest and greatest games.</p>
                 <div className={styles.links}>
-                    <a href="https://github.com/Stormblessed10/shopping-cart"><img src="/icons/github.svg" alt="star"/> GitHub</a>
+                    <a href="https://github.com/Stormblessed10/shopping-cart">{<SvgGithub/>} GitHub</a>
                     <a href="https://rawg.io/">RAWG API</a>
                 </div>
             </div>
