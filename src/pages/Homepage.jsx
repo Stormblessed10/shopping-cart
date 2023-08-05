@@ -1,4 +1,5 @@
-import styles from "./Home.module.css";
+import styles from "./Homepage.module.css";
+import bgUrl from "../video/bg.mp4"
 import { Link } from "react-router-dom";
 import { 
     SvgTop,
@@ -9,7 +10,7 @@ import {
     SvgGithub
 } from "../components/Svgs.jsx";
 
-export default function Home() {
+export default function Homepage() {
     return <section className={styles.home}>
         <div className={styles.info}>
             <div className={`${styles.wrap}`}>
@@ -35,6 +36,6 @@ export default function Home() {
                 <li><Link to="/shop/releases/this-week/1"><span><SvgThisWeek/></span>This week</Link></li>
             </ul>
         </nav>
-        <video className={styles.video} autoPlay muted loop src="/bg.mp4"></video>
+        <video className={styles.video} autoPlay muted loop src={bgUrl}></video>
     </section>
 }
