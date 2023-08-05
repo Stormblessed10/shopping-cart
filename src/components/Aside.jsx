@@ -13,6 +13,14 @@ import {
     SvgNextWeek,
     SvgThisWeek 
 } from "./Svgs.jsx";
+import actionImg from "../icons/action.png";
+import adventureImg from "../icons/adventure.png"
+import indieImg from "../icons/indie.ico"
+import puzzleImg from "../icons/puzzle.png"
+import rpgImg from "../icons/rpg.png"
+import shooterImg from "../icons/shooter.png"
+import sportsImg from "../icons/sports.png"
+import strategyImg from "../icons/strategy.png"
 
 export default function Aside() {
     return <aside className={styles.aside}>
@@ -39,14 +47,14 @@ export default function Aside() {
             </ul>
             <ul className={styles.list}>
                 <li><h2>Genres</h2></li>
-                <li><NavLink className={({isActive}) => isActive ? styles.active : ""} to="/shop/genres/action/1"><img src="/icons/action.png" alt="action" />Action</NavLink></li>
-                <li><NavLink className={({isActive}) => isActive ? styles.active : ""} to="/shop/genres/role-playing-games-rpg/1"><img src="/icons/rpg.png" alt="rpg" />RPG</NavLink></li>
-                <li><NavLink className={({isActive}) => isActive ? styles.active : ""} to="/shop/genres/strategy/1"><img src="/icons/strategy.png" alt="strategy" />Strategy</NavLink></li>
-                <li><NavLink className={({isActive}) => isActive ? styles.active : ""} to="/shop/genres/shooter/1"><img src="/icons/shooter.png" alt="shooter" />Shooter</NavLink></li>
-                <li><NavLink className={({isActive}) => isActive ? styles.active : ""} to="/shop/genres/adventure/1"><img src="/icons/adventure.png" alt="adventure" />Adventure</NavLink></li>
-                <li><NavLink className={({isActive}) => isActive ? styles.active : ""} to="/shop/genres/puzzle/1"><img src="/icons/puzzle.png" alt="puzzle" />Puzzle</NavLink></li>
-                <li><NavLink className={({isActive}) => isActive ? styles.active : ""} to="/shop/genres/indie/1"><img src="/icons/indie.ico" alt="indie" />Indie</NavLink></li>
-                <li><NavLink className={({isActive}) => isActive ? styles.active : ""} to="/shop/genres/sports/1"><img src="/icons/sports.png" alt="sports" />Sports</NavLink></li>
+                <li><NavLink className={({isActive}) => isActive ? styles.active : ""} to="/shop/genres/action/1"><img src={actionImg} alt="action" />Action</NavLink></li>
+                <li><NavLink className={({isActive}) => isActive ? styles.active : ""} to="/shop/genres/role-playing-games-rpg/1"><img src={rpgImg} alt="rpg" />RPG</NavLink></li>
+                <li><NavLink className={({isActive}) => isActive ? styles.active : ""} to="/shop/genres/strategy/1"><img src={strategyImg} alt="strategy" />Strategy</NavLink></li>
+                <li><NavLink className={({isActive}) => isActive ? styles.active : ""} to="/shop/genres/shooter/1"><img src={shooterImg} alt="shooter" />Shooter</NavLink></li>
+                <li><NavLink className={({isActive}) => isActive ? styles.active : ""} to="/shop/genres/adventure/1"><img src={adventureImg} alt="adventure" />Adventure</NavLink></li>
+                <li><NavLink className={({isActive}) => isActive ? styles.active : ""} to="/shop/genres/puzzle/1"><img src={puzzleImg} alt="puzzle" />Puzzle</NavLink></li>
+                <li><NavLink className={({isActive}) => isActive ? styles.active : ""} to="/shop/genres/indie/1"><img src={indieImg} alt="indie" />Indie</NavLink></li>
+                <li><NavLink className={({isActive}) => isActive ? styles.active : ""} to="/shop/genres/sports/1"><img src={sportsImg} alt="sports" />Sports</NavLink></li>
             </ul>
         </nav>
     </aside>

@@ -6,7 +6,7 @@ import { loader as gameLoader } from "./pages/Game";
 import { Suspense, lazy } from "react";
 import Spinner from "./components/Spinner";
 
-const Home = lazy(() =>import("./pages/Home"));
+const Homepage = lazy(() =>import("./pages/Homepage"));
 const Shop = lazy(() =>import("./pages/Shop"));
 const Game = lazy(() =>import("./pages/Game"));
 const PageNotFound = lazy(() =>import("./pages/PageNotFound"));
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home/>
+        element: <Homepage/>
       },
       {
         path: "/shop",

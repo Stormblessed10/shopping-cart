@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./Search.module.css";
 import { Link } from "react-router-dom";
+import searchImg from "../icons/search.svg";
 
 const URL = "https://api.rawg.io/api/games";
 const KEY = import.meta.env.VITE_KEY;
@@ -38,7 +39,7 @@ export default function Search() {
     return <div className={styles.search}>
         <div className={styles["search-bar"]}>
             <input ref={inputEl} onBlur={() => setFocus(false)} onFocus={() => setFocus(true)} value={input} onChange={(e) => setInput(e.target.value)} type="text" placeholder="Search..."/>
-            <span><img src="/icons/search.svg" alt="search" /></span>
+            <span><img src={searchImg} alt="search" /></span>
         </div>
         <ul onMouseDown={(e) => e.preventDefault()} className={`${styles.results} ${focus && games[0] && styles.visible}`}>
             {games.map(game => <li onClick={handleHide} key={game.id} className={styles["cart-item"]}>
