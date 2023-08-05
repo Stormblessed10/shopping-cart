@@ -36,6 +36,7 @@
     font-size: 1.8rem;
     text-decoration: none;
     color: var(--color-primary);
+    transition: all 0.5s;
 }
 
 .list li img {
@@ -53,10 +54,12 @@
     height: 3.2rem;
     width: 3.2rem;
     border-radius: 6px;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
-.list a:hover, .list a.active {
+.list li a:hover, .list li a.active {
+    background-color: var(--color-secondary);
+    border-radius: 8px;
 
     & span {
         background-color: var(--color-primary);
