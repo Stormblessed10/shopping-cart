@@ -6,8 +6,6 @@ import Spinner from "../components/Spinner.jsx";
 export default function AppLayout() {
     const { state } = useNavigation();
 
-    console.log(state);
-
     return <>
         <Header></Header>
         <main className={styles.main}>
