@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
 
-    height: 80vh;
+    min-height: 80vh;
     width: 100%;
     color: var(--color-primary);
     text-align: center;
@@ -48,7 +48,6 @@
     display: flex;
     justify-content: center;
     gap: 3rem;
-    margin-top: 2rem;
 }
 
 .info h1 {
@@ -92,4 +91,40 @@
     top: 0;
     bottom: 0;
     z-index: -100;
+}
+
+@media (max-width: 64em) {
+    .home a:link, .home a:visited {
+        font-size: 1.4rem;
+        padding: 1rem 2rem;
+    }
+
+    .wrap {
+        width: 40rem;
+    }
+
+    .nav {
+        width: 25rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .home {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 26.5625em) {
+    .wrap {
+        width: 30rem;
+    }
+
+    .home a:link, .home a:visited {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+    }
+
+    .nav {
+        width: 25rem;
+    }
 }
