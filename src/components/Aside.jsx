@@ -22,8 +22,8 @@ import shooterImg from "../icons/shooter.png"
 import sportsImg from "../icons/sports.png"
 import strategyImg from "../icons/strategy.png"
 
-export default function Aside() {
-    return <aside className={styles.aside}>
+export default function Aside({ className }) {
+    return <aside className={styles.aside + " " + className}>
         <nav>
             <ul className={styles.list}>
                 <li><h2>Top</h2></li>
