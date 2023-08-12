@@ -8,8 +8,7 @@
 
 .game-item img {
     width: 100%;
-    min-height: 20rem;
-    height: 20rem;
+    aspect-ratio: 1.7 / 1;
     object-fit: cover;
 }
 
