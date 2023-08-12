@@ -33,3 +33,23 @@
     color: var(--color-tertiary);
     background-color: var(--color-primary);
 }
+
+@media (max-width: 53.75em) {
+    .content h1 {
+        font-size: 5rem;
+    }
+
+    .pages a:link, .pages a:visited {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 36.25em) {
+    .content h1 {
+        font-size: 4rem;
+    }
+
+    .pages a:link, .pages a:visited {
+        font-size: 1.6rem;
+    }
+}

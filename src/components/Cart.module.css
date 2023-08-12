@@ -92,3 +92,16 @@
     top: 0;
     left: 0;
 }
+
+@media (max-width: 36.25em) {
+    .cart {
+        width: 80%;
+    }
+}
+
+@media (max-width: 23.4375em) {
+    .cart-item a:link, .cart-item a:visited {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

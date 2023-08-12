@@ -84,3 +84,25 @@
         fill: var(--color-primary);
     }
 }
+
+@media (max-width: 45em) {
+    .aside {
+        visibility: hidden;
+        opacity: 0;
+        position: fixed;
+        right: 0;
+
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+        padding: 2rem 1rem;
+    }
+
+    .aside nav {
+        height: 90vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow-y: scroll;
+    }
+}
