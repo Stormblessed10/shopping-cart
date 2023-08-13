@@ -17,7 +17,7 @@ export default function ToggleButton({ style, game }) {
     }
 
     if (isAdded(game)) {
-    return <button style={style} onClick={() => handleRemoveFromCart(game)} className={styles.button}>- Remove from cart</button>;
+    return <button style={style} onClick={() => handleRemoveFromCart(game)} className={styles.button}>-<span>Remove from cart</span></button>;
 }
-    return <button style={style} onClick={() => handleAddToCart(game)} className={styles.button}>+ Add to cart</button>;
+    return <button style={style} onClick={() => handleAddToCart(game)} className={styles.button}>+<span>Add to cart</span></button>;
 }
