@@ -1,14 +1,14 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import styles from "./Carousel.module.css";
 
-const WIDTH = 800;
-
 export default function Carousel({images}) {
+    const [ref, setRef] = useState();
+
+    const WIDTH = ref?.offsetWidth;
     const baseVal = (images.length + 1) * -WIDTH + WIDTH;
-    
+
     const [transform, setTransform] = useState(baseVal);
     const [currentDot, setCurrentDot] = useState(0);
-    const slide = useRef(null);
     
     const object = useMemo(() => {
         return {totalDistance: 0, oldCursor: null, current: baseVal, isMouseDown: false, transition: false};
@@ -18,6 +18,10 @@ export default function Carousel({images}) {
         transform: `translateX(${transform}px)`,
         transition: object.transition ? "all 0.4s" : "all 0s" 
     }
+
+    useEffect(() => {
+        setTransform(baseVal);
+    }, [baseVal]); 
   
     function switchImg(direction) {
         object.transition = true;
@@ -25,12 +29,12 @@ export default function Carousel({images}) {
         switch(direction) {
             case "prev":
                 object.current += WIDTH;
-                setCurrentDot(slide => slide - 1);
+                setCurrentDot(dot => dot - 1);
                 if (currentDot === 0) setCurrentDot(images.length - 1);
                 break;
             case "next":
                 object.current -= WIDTH;
-                setCurrentDot(slide => slide + 1);
+                setCurrentDot(dot => dot + 1);
                 if (currentDot === images.length - 1) setCurrentDot(0);
                 break;
             default:
@@ -87,7 +91,7 @@ export default function Carousel({images}) {
                     <path d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"></path>
                 </svg>
             </button>
-            <div onMouseLeave={handleEndDragging} onMouseUp={handleEndDragging} onMouseMove={(e) => handleGrabbing(e)} onMouseDown={handleGrab} ref={slide} className={styles.carousel}>
+            <div onMouseLeave={handleEndDragging} onMouseUp={handleEndDragging} onMouseMove={(e) => handleGrabbing(e)} onMouseDown={handleGrab} ref={newRef => setRef(newRef)} className={styles.carousel}>
 
                 {images.map(screenshot => <img key={screenshot.id}  style={style} src={screenshot.image} alt={screenshot.id} />)}
                 {images.map(screenshot => <img key={screenshot.id}  style={style} src={screenshot.image} alt={screenshot.id} />)}
