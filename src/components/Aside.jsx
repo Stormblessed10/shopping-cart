@@ -15,7 +15,7 @@ import {
 } from "./Svgs.jsx";
 import actionImg from "../icons/action.png";
 import adventureImg from "../icons/adventure.png"
-import indieImg from "../icons/indie.ico"
+import indieImg from "../icons/indie.png"
 import puzzleImg from "../icons/puzzle.png"
 import rpgImg from "../icons/rpg.png"
 import shooterImg from "../icons/shooter.png"
