@@ -7,8 +7,8 @@
 .carousel {
     display: flex;
     flex-wrap: nowrap;
-
-    width: 80rem;
+    height: 50rem;
+    width: 100%;
     overflow: hidden;
     cursor: grab;
     border-radius: 20px;
@@ -20,8 +20,8 @@
 
 .carousel img {
     flex-shrink: 0;
-    height: 50rem;
-    width: 80rem;
+    height: 100%;
+    width: 100%;
     background-color: var(--color-primary);
     -webkit-user-drag: none;
     -ms-user-drag: none;
@@ -65,7 +65,7 @@
 
     position: absolute;
     top: 0;
-    z-index: 100;
+    z-index: 99;
 
     background: transparent;
     font-size: 20rem;
@@ -85,4 +85,54 @@
 
 .button-right {
     right: 0;
+}
+
+@media (max-width: 52.5em) {
+    .carousel-wrapper {
+        width: 60rem;
+        height: 40rem;
+    }
+
+    .carousel {
+        height: 40rem;
+    }
+}
+
+@media (max-width: 43.75rem) {
+    .carousel-wrapper {
+        width: 50rem;
+        height: 30rem;
+    }
+
+    .carousel {
+        height: 30rem;
+    }
+
+    .dots {
+        padding: 1rem;
+    }
+    
+    .dots div {
+        border-radius: 50%;
+        height: 0.8rem;
+        width: 0.8rem;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 35.625rem) {
+    .carousel-wrapper {
+        width: 30rem;
+        height: 20rem;
+    }
+
+    .carousel {
+        height: 20rem;
+    }
+}
+
+@media (max-width: 26.5625rem) {
+   .dots {
+    display: none;
+   }
 }
