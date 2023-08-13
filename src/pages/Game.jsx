@@ -28,7 +28,7 @@ export default function Game() {
             <h1>{game.name}</h1>
         </header>
         <div className={styles.wrapper}>
-            <div>
+            <div className={styles["details-wrapper"]}>
                <AddToCart style={{ fontSize: "2.5rem", paddingLeft: "3rem" }} game={{...game, img: game.background_image, price}} />
                 <GameDetails game={game} styles={styles} price={price}/>
             </div>

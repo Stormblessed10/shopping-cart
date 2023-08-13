@@ -101,3 +101,99 @@
     font-size: 2.6rem;
     margin-bottom: 1.5rem;
 }
+
+@media (max-width: 64em) {
+    .game h1 {
+        font-size: 3.2rem;
+    }
+
+    .wrapper:not(:first-child) {
+        flex-direction: column-reverse;
+        margin-top: 3rem;
+    }
+
+    .wrapper > div:first-child {
+        align-self: flex-start;
+        width: 100%;
+    }
+
+    .details {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+        padding: 3rem 3rem 0 3rem;
+    }
+
+    .details li {
+        align-items: center;
+    }
+}
+
+@media (max-width: 52.5em) {
+    .details li > div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .details li span:not(:last-child) {
+        &::after {
+            content: "";
+            display: inline-block;
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 43.75rem) {
+    .game h1 {
+        font-size: 2.6rem;
+    }
+
+    .details-wrapper > button {
+        position: fixed;
+        bottom: 2.5rem;
+        right: 2.5rem;
+        z-index: 100;
+        
+        background-color: var(--color-background);
+        color: var(--color-primary);
+        border-radius: 50%;
+
+        height: 4rem;
+        width: 4rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 5rem !important;
+        padding: 0 0 1rem 0 !important;
+
+        & span {
+            display: none;
+        }
+    }
+
+    .details {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .descr {
+        text-align: center;
+    }
+}
+
+@media (max-width: 35.625rem) {
+    .game h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 31.25rem) {
+    .details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
